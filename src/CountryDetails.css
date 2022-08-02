@@ -1,0 +1,52 @@
+.details-flag {
+  width: 200px;
+  height: 125px;
+}
+
+.details-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: rgb(75, 75, 75);
+}
+
+.details-items {
+  margin: 10px 0;
+  font-size: 16px;
+  color: black;
+}
+
+.details-items span {
+  font-weight: 700;
+}
+
+.details-items--member {
+  margin: 20px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: grey;
+}
+
+.borders-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.borders-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .borders-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .borders-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+

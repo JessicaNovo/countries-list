@@ -4,6 +4,39 @@
   color: rgb(75, 75, 75);
 }
 
+.homepage-form__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage-form--search {
+  margin-bottom: 20px;
+}
+
+.homepage-form--filter {
+  margin-bottom: 20px;
+}
+
+.homepage-form__label {
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(75, 75, 75);
+}
+
+.homepage-form__label input {
+  margin-left: 10px;
+}
+
+input[type=submit] {
+  margin-top: 10px;
+  padding:5px 15px; 
+  background: white; 
+  border: 1px solid grey;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .countries-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -13,6 +46,15 @@
 @media (min-width: 768px) {
   .countries-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .homepage-form__wrapper {
+    flex-direction: row;
+    margin-bottom: 20px; 
+  }
+
+  .homepage-form--search {
+    margin-right: 20px;
   }
 }
 

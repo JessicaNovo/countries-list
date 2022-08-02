@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import './CountryCard.css';
+import './Cards.css';
 
 const CountryCard = ({countryData}) => {
   const name = countryData.name.common;

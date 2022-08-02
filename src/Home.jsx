@@ -42,22 +42,25 @@ const Home = () => {
     <div className="homepage">
       <div className="homepage-header">
         <h1 className="homepage-title">Countries</h1>
-        <form onSubmit={handleSearch}>
-          <label>
-            Search by country name:
-            <input type="text" value={searchedCountry} onChange={event => setSearchedCountry(event.target.value)} />
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
-        <form onSubmit={handleFilter}>
-          {regions.map((region) => (
-            <label key={region}>
-              {region}
-              <input type="radio" name="region" value={region} onChange={event => setSearchedRegion(event.target.value)} />
+        <div className="homepage-form__wrapper">
+          <form className="homepage-form--search" onSubmit={handleSearch}>
+            <label className="homepage-form__label">
+              Search by country name:
+              <input type="text" value={searchedCountry} onChange={event => setSearchedCountry(event.target.value)} />
             </label>
-          ))}
-          <input type="submit" value="Submit" />
-        </form>
+            <input type="submit" value="Submit" />
+          </form>
+          <form className="homepage-form--filter" onSubmit={handleFilter}>
+            <label className="homepage-form__label">Filter by region:</label>
+            {regions.map((region) => (
+              <label key={region}>
+                {region}
+                <input type="radio" name="region" value={region} onChange={event => setSearchedRegion(event.target.value)} />
+              </label>
+            ))}
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
       </div>
       {!!loading  && (
         <div>Loading...</div>
